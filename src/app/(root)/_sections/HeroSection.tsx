@@ -1,5 +1,4 @@
 import Container from "@/components/ui/Container";
-import React from "react";
 
 const HeroSection = () => {
   return (
