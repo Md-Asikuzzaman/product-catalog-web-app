@@ -1,6 +1,7 @@
 import { Product } from "@/lib/getProducts";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 type ProductType = Pick<Product, "id" | "title" | "image" | "price">;
 
@@ -22,9 +23,7 @@ const ProductCard = ({ id, title, image, price }: ProductType) => {
         <h3 className="text-lg font-semibold mt-4 line-clamp-2">{title}</h3>
         <p className="text-purple-600 font-medium">{price}</p>
         <div className="mt-3 space-y-2">
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full">
-            Add to Cart
-          </button>
+          <Button>Add to Cart</Button>
           <Link
             href={`/${id}`}
             className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full inline-block text-center"
