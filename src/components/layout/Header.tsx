@@ -3,7 +3,7 @@ import SearchBar from "../ui/SearchBar";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md px-6 py-4 flex items-center justify-between gap-5">
+    <header className="bg-white shadow-md px-6 py-4 flex items-center justify-between gap-5 sticky top-0 z-50">
       {/* Logo */}
       <div className="text-xl font-bold text-purple-600 uppercase">
         <Link href="/">Logo</Link>
