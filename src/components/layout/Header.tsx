@@ -5,11 +5,13 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md px-6 py-4 flex items-center justify-between gap-5">
       {/* Logo */}
-      <div className="text-xl font-bold text-purple-600 uppercase">logo</div>
+      <div className="text-xl font-bold text-purple-600 uppercase">
+        <Link href="/">Logo</Link>
+      </div>
 
       {/* Navigation */}
       <nav className="hidden md:flex space-x-6">
-        <Link href="#" className="text-gray-700 hover:text-purple-600">
+        <Link href="/" className="text-gray-700 hover:text-purple-600">
           Home
         </Link>
         <Link href="#" className="text-gray-700 hover:text-purple-600">

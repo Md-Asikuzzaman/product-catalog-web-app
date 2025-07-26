@@ -21,7 +21,7 @@ const ProductCard = ({ id, title, image, price }: ProductType) => {
       </div>
       <div>
         <h3 className="text-lg font-semibold mt-4 line-clamp-2">{title}</h3>
-        <p className="text-purple-600 font-medium">{price}</p>
+        <p className="text-purple-600 font-medium">${price}</p>
         <div className="mt-3 space-y-2">
           <Button>Add to Cart</Button>
           <Link

@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import { getProductById } from "@/lib/getProductById";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AiFillStar } from "react-icons/ai";
 
@@ -17,7 +18,12 @@ export default async function ProductDetails({ params }: Props) {
   }
 
   return (
-    <section className="bg-gray-100 py-8">
+    <section className="bg-gray-100 py-8 px-4 space-y-4">
+      <div className="max-w-6xl mx-auto">
+        <Link className="text-purple-600 hover:underline text-sm" href="/">
+          Back to Home
+        </Link>
+      </div>
       <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow">
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">
           {/* Product Image */}
@@ -45,6 +51,8 @@ export default async function ProductDetails({ params }: Props) {
               <AiFillStar className="text-purple-600" />
               <span>({product.rating.count} reviews)</span>
             </p>
+
+            {/* Buttons */}
             <div className="flex gap-4">
               <Button className="mt-4">Add to Cart</Button>
               <Button className="mt-4">Order Now</Button>
