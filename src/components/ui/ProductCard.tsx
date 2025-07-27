@@ -25,7 +25,7 @@ const ProductCard = ({ id, title, image, price }: ProductType) => {
         <div className="mt-3 space-y-2">
           <Button>Add to Cart</Button>
           <Link
-            href={`/${id}`}
+            href={`/products/${id}`}
             className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full inline-block text-center"
           >
             View Details

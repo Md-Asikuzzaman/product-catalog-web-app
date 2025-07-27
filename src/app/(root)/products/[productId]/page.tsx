@@ -1,8 +1,9 @@
 import Button from "@/components/ui/Button";
+import { getUser } from "@/lib/auth";
 import { getProductById } from "@/lib/getProductById";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { AiFillStar } from "react-icons/ai";
 
 interface Props {
@@ -10,6 +11,12 @@ interface Props {
 }
 
 export default async function ProductDetails({ params }: Props) {
+  // Check if user is logged in
+  const user = await getUser();
+  if (!user) {
+    return redirect("/login");
+  }
+
   const { productId } = await params;
   const product = await getProductById(productId);
 

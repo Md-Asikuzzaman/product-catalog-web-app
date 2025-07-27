@@ -1,9 +1,11 @@
+"use server";
+
 import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 
 const SECRET = "123456";
 
-export async function getUserFromToken() {
+export async function getUser() {
   const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;
   if (!token) return null;

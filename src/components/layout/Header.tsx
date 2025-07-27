@@ -1,7 +1,11 @@
 import Link from "next/link";
 import SearchBar from "../ui/SearchBar";
+import Logout from "../ui/Logout";
+import { getUser } from "@/lib/auth";
 
-const Header = () => {
+const Header = async () => {
+  const user = await getUser();
+
   return (
     <header className="bg-white shadow-md px-6 py-4 flex items-center justify-between gap-5 sticky top-0 z-50">
       {/* Logo */}
@@ -26,7 +30,10 @@ const Header = () => {
       </nav>
 
       {/* Search Bar */}
-      <SearchBar />
+      <div>
+        <SearchBar />
+        <div>{user ? <Logout /> : <Link href="/login">Login</Link>}</div>
+      </div>
     </header>
   );
 };
