@@ -9,7 +9,7 @@ const Footer = () => {
       <Container className="grid md:grid-cols-3 gap-6 text-center md:text-left">
         {/* Logo */}
         <div>
-          <h2 className="text-2xl font-bold uppercase">Logo</h2>
+          <h2 className="text-2xl font-bold">Shop</h2>
           <p className="text-sm mt-2 text-gray-400">Product Catalog Web App.</p>
         </div>
 
