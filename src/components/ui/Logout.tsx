@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Button from "./Button";
 
 const Logout = () => {
   const handleLogout = async () => {
@@ -13,7 +14,11 @@ const Logout = () => {
     }
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return (
+    <Button onClick={handleLogout} className="bg-rose-600 hover:bg-rose-700">
+      Logout
+    </Button>
+  );
 };
 
 export default Logout;

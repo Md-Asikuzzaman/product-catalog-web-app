@@ -10,7 +10,7 @@ const Button: NextPage<Props> = ({ children, className, ...props }) => {
     <button
       {...props}
       className={clsx(
-        "bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full",
+        "bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full cursor-pointer",
         className
       )}
     >

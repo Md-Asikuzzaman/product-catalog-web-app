@@ -2,6 +2,7 @@ import Link from "next/link";
 import SearchBar from "../ui/SearchBar";
 import Logout from "../ui/Logout";
 import { getUser } from "@/lib/auth";
+import Button from "../ui/Button";
 
 const Header = async () => {
   const user = await getUser();
@@ -30,9 +31,17 @@ const Header = async () => {
       </nav>
 
       {/* Search Bar */}
-      <div>
+      <div className="flex items-center gap-4">
         <SearchBar />
-        <div>{user ? <Logout /> : <Link href="/login">Login</Link>}</div>
+        <div>
+          {user ? (
+            <Logout />
+          ) : (
+            <Link href="/login">
+              <Button>Login</Button>
+            </Link>
+          )}
+        </div>
       </div>
     </header>
   );
