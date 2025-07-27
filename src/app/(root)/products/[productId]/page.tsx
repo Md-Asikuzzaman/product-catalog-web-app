@@ -3,12 +3,40 @@ import Button from "@/components/ui/Button";
 import ProductDetailsCartButton from "@/components/ui/ProductDetailsCartButton";
 import { getUser } from "@/lib/auth";
 import { getProductById } from "@/lib/getProductById";
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
 import { AiFillStar } from "react-icons/ai";
 
 interface Props {
   params: Promise<{ productId: string }>;
+}
+
+// generateMetadata
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { productId } = await params;
+  const product = await getProductById(productId);
+
+  if (!product) {
+    return notFound();
+  }
+
+  return {
+    title: `${product.title}`,
+    description: `${product.description}`,
+    openGraph: {
+      title: `${product.title}`,
+      description: `Buy ${product.title} at only $${product.price}. 100% original and fresh products.`,
+      images: [
+        {
+          url: product.image,
+          width: 800,
+          height: 600,
+          alt: product.title,
+        },
+      ],
+    },
+  };
 }
 
 export default async function ProductDetails({ params }: Props) {

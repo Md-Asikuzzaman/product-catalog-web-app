@@ -12,9 +12,12 @@ const HeroSection = () => {
             Shop high-quality, stylish products that fit every mood and moment.
             Comfort meets creativity in every thread.
           </p>
-          <button className="bg-white text-purple-600 font-semibold px-6 py-3 rounded-full hover:bg-purple-100 transition">
+          <a
+            href="#products"
+            className="bg-white text-purple-600 font-semibold px-6 py-3 rounded-full hover:bg-purple-100 transition"
+          >
             Shop Now
-          </button>
+          </a>
         </div>
       </Container>
     </section>
