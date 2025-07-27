@@ -21,7 +21,6 @@ const ProductCard = ({ ...product }: Product) => {
 
   const inCart = cart.find((p) => p.id === product.id);
 
-  console.log({ cart });
   return (
     <div className="bg-white rounded-lg shadow hover:shadow-md transition p-4 flex flex-col justify-between">
       <div className="relative aspect-[4/5] bg-gray-100 rounded overflow-hidden">

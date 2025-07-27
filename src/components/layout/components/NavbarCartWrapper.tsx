@@ -6,7 +6,7 @@ import { CgShoppingCart } from "react-icons/cg";
 const NavbarCartButton = dynamic(() => import("./NavbarCartButton"), {
   ssr: false,
   loading: () => (
-    <button className="relative rounded-full p-2 hover:bg-gray-100 cursor-pointer">
+    <button aria-label='cart' className="relative rounded-full p-2 hover:bg-gray-100 cursor-pointer">
       <CgShoppingCart className="size-6 text-purple-600" />
     </button>
   ),

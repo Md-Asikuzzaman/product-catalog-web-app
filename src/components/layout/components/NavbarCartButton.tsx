@@ -8,8 +8,11 @@ const NavbarCartButton = () => {
   const { getTotalItems } = useCartStore();
 
   return (
-    <Link href="/cart">
-      <button className="relative rounded-full p-2 hover:bg-gray-100 cursor-pointer">
+    <Link aria-label="cart" href="/cart">
+      <button
+        aria-label="cart"
+        className="relative rounded-full p-2 hover:bg-gray-100 cursor-pointer"
+      >
         <CgShoppingCart className="size-6 text-purple-600" />
         {getTotalItems() > 0 && (
           <span

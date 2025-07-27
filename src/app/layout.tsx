@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Product Catalog Web App",
   description: "Product Catalog Web App | Build with Next.js & React.js",
   keywords: "product, catalog, app, next.js, react.js",
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_URL}`),
 };
 
 export default function RootLayout({

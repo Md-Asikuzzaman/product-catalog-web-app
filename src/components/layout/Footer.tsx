@@ -1,6 +1,5 @@
 import Link from "next/link";
-import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Container from "../ui/Container";
 
 const Footer = () => {
@@ -44,24 +43,21 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-2">Follow Us</h3>
           <div className="flex justify-center md:justify-start gap-4 mt-2 text-xl text-gray-300">
-            <Link href="#">
+            <Link href="#" aria-label="facebook">
               <FaFacebookF className="hover:text-white" />
             </Link>
-            <Link href="#">
+            <Link href="#" aria-label="twitter">
               <FaTwitter className="hover:text-white" />
             </Link>
-            <Link href="#">
+            <Link href="#" aria-label="instagram">
               <FaInstagram className="hover:text-white" />
-            </Link>
-            <Link href="#">
-              <FaGithub className="hover:text-white" />
             </Link>
           </div>
         </div>
       </Container>
 
       {/* Copyright */}
-      <div className="text-center text-sm text-gray-500 mt-8">
+      <div className="text-center text-sm text-gray-400 mt-8">
         &copy; {new Date().getFullYear()}. All rights reserved.
       </div>
     </footer>
