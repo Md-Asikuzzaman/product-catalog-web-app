@@ -6,7 +6,7 @@ import { FiSearch } from "react-icons/fi";
 const SearchBar = () => {
   const { searchQuery, setSearchQuery } = useProductFilter();
   return (
-    <div className="relative max-w-[400px] w-full">
+    <div className="relative w-full">
       <input
         type="text"
         placeholder="Search (e.g. Mens Casual, Women's)"
@@ -14,7 +14,10 @@ const SearchBar = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <FiSearch size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-600" />
+      <FiSearch
+        size={20}
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-600"
+      />
     </div>
   );
 };

@@ -32,7 +32,7 @@ const Header = async () => {
       </nav>
 
       {/* Search Bar */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 max-w-[550px] w-full">
         <NavbarCartButtonWrapper />
         <SearchBar />
         <div>

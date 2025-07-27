@@ -10,7 +10,7 @@ const NavbarLogout = () => {
     });
 
     if (res.status === 200) {
-      window.location.href = "/";
+      window.location.href = "/login";
     }
   };
 

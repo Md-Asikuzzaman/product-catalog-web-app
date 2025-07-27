@@ -53,8 +53,8 @@ export default function LoginForm() {
             <input
               type="email"
               {...register("email")}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="user@example.com"
+              className="w-full px-4 py-2 border border-purple-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              placeholder="example@gmail.com"
             />
             {errors.email && (
               <p className="text-sm text-rose-500 mt-1">
@@ -70,8 +70,8 @@ export default function LoginForm() {
             <input
               type="password"
               {...register("password")}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="••••••••"
+              className="w-full px-4 py-2 border border-purple-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              placeholder="123456"
             />
             {errors.password && (
               <p className="text-sm text-rose-500 mt-1">
