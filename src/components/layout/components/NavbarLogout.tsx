@@ -1,9 +1,9 @@
 "use client";
 
+import Button from "@/components/ui/Button";
 import React from "react";
-import Button from "./Button";
 
-const Logout = () => {
+const NavbarLogout = () => {
   const handleLogout = async () => {
     const res = await fetch("/api/logout", {
       method: "POST",
@@ -21,4 +21,4 @@ const Logout = () => {
   );
 };
 
-export default Logout;
+export default NavbarLogout;
