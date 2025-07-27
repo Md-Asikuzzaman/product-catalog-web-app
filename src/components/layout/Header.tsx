@@ -1,8 +1,9 @@
-import Link from "next/link";
-import SearchBar from "../ui/SearchBar";
-import Logout from "../ui/Logout";
 import { getUser } from "@/lib/auth";
+import Link from "next/link";
 import Button from "../ui/Button";
+import NavbarCartButton from "../ui/NavbarCartButton ";
+import Logout from "../ui/Logout";
+import SearchBar from "../ui/SearchBar";
 
 const Header = async () => {
   const user = await getUser();
@@ -32,6 +33,7 @@ const Header = async () => {
 
       {/* Search Bar */}
       <div className="flex items-center gap-4">
+        <NavbarCartButton />
         <SearchBar />
         <div>
           {user ? (
