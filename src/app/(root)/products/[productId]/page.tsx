@@ -1,5 +1,6 @@
 import BackToHome from "@/components/ui/BackToHome";
 import Button from "@/components/ui/Button";
+import ProductDetailsCartButton from "@/components/ui/ProductDetailsCartButton";
 import { getUser } from "@/lib/auth";
 import { getProductById } from "@/lib/getProductById";
 import Image from "next/image";
@@ -58,9 +59,9 @@ export default async function ProductDetails({ params }: Props) {
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-4">
-              <Button className="mt-4">Add to Cart</Button>
-              <Button className="mt-4">Order Now</Button>
+            <div className="flex gap-4 items-center mt-4 md:mt-8">
+              <ProductDetailsCartButton {...product} />
+              <Button className="!w-1/2">Order Now</Button>
             </div>
           </div>
         </div>

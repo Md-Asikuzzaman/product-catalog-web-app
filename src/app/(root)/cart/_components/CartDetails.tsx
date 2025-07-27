@@ -96,19 +96,19 @@ const CartDetails = () => {
             <div className="text-xl font-bold text-gray-700">
               Total:{" "}
               <span className="text-purple-600">
-                ৳{getTotalPrice().toFixed(2)}
+                ${getTotalPrice().toFixed(2)}
               </span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link
-                href="/shop"
+                href="/"
                 className="w-full sm:w-auto py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-all text-center"
               >
                 Continue Shopping
               </Link>
               <Link
-                href="/checkout"
+                href="/"
                 className="w-full sm:w-auto py-3 px-6 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-all text-center"
               >
                 Proceed to Checkout
