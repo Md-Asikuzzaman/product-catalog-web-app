@@ -1,8 +1,8 @@
+import BackToHome from "@/components/ui/BackToHome";
 import Button from "@/components/ui/Button";
 import { getUser } from "@/lib/auth";
 import { getProductById } from "@/lib/getProductById";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { AiFillStar } from "react-icons/ai";
 
@@ -27,9 +27,7 @@ export default async function ProductDetails({ params }: Props) {
   return (
     <section className="bg-gray-100 py-8 px-4 space-y-4">
       <div className="max-w-6xl mx-auto">
-        <Link className="text-purple-600 hover:underline text-sm" href="/">
-          Back to Home
-        </Link>
+        <BackToHome />
       </div>
       <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow">
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">

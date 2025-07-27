@@ -1,10 +1,9 @@
 import { getUser } from "@/lib/auth";
 import Link from "next/link";
 import Button from "../ui/Button";
-import NavbarCartButton from "./components/NavbarCartButton";
+import NavbarCartButtonWrapper from "./components/NavbarCartWrapper";
 import NavbarLogout from "./components/NavbarLogout";
 import SearchBar from "./components/SearchBar";
-import NavbarCartButtonWrapper from "./components/NavbarCartWrapper";
 
 const Header = async () => {
   const user = await getUser();
