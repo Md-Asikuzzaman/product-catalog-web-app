@@ -11,6 +11,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+// Metadata for SEO
 export const metadata: Metadata = {
   title: "Product Catalog Web App",
   description: "Product Catalog Web App | Build with Next.js & React.js",
