@@ -9,7 +9,6 @@ const ProductsSection = async () => {
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
         Our Featured Products
       </h2>
-
       <ProductsWrapper products={products} />
     </section>
   );

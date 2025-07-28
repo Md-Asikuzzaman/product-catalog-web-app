@@ -1,12 +1,11 @@
 "use client";
 
 import { useCartStore } from "@/store/useCartStore";
-import React from "react";
-import Button from "./Button";
-import { BiMinus, BiPlus } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
+import { BiMinus, BiPlus } from "react-icons/bi";
+import Button from "./Button";
 
-const ProductDetailsCartButton = ({ ...product }: Product) => {
+const CartActionBtn = ({ ...product }: Product) => {
   const {
     cart,
     addToCart,
@@ -17,7 +16,7 @@ const ProductDetailsCartButton = ({ ...product }: Product) => {
 
   const inCart = cart.find((p) => p.id === product.id);
   return (
-    <div className="w-1/2">
+    <>
       {/* Add to Cart */}
       {!inCart ? (
         <Button
@@ -62,8 +61,8 @@ const ProductDetailsCartButton = ({ ...product }: Product) => {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
-export default ProductDetailsCartButton;
+export default CartActionBtn;

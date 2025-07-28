@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 
-// Mock user for testing
+// Mock user data
 const mockUser = {
   email: "example@gmail.com",
   password: "123456",
@@ -18,13 +18,13 @@ export async function POST(request: Request) {
       { status: 200 }
     );
 
-    // Set JWT in HttpOnly cookie
+    // Set JWT token
     response.cookies.set("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
       path: "/",
-      maxAge: 60 * 60, // 1 hour
+      maxAge: 60 * 60,
     });
 
     return response;

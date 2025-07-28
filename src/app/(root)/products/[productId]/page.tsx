@@ -1,6 +1,6 @@
 import BackToHome from "@/components/ui/BackToHome";
 import Button from "@/components/ui/Button";
-import ProductDetailsCartButton from "@/components/ui/ProductDetailsCartButton";
+import CartActionBtn from "@/components/ui/CartActionBtn";
 import { getUser } from "@/lib/auth";
 import { getProductById } from "@/lib/getProductById";
 import { Metadata } from "next";
@@ -29,10 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `Buy ${product.title} at only $${product.price}. 100% original and fresh products.`,
       images: [
         {
-          url: product.image,
+          url: `${product.image}`,
           width: 800,
           height: 600,
-          alt: product.title,
+          alt: `${product.title}`,
         },
       ],
     },
@@ -88,7 +88,9 @@ export default async function ProductDetails({ params }: Props) {
 
             {/* Buttons */}
             <div className="flex gap-4 items-center mt-4 md:mt-8">
-              <ProductDetailsCartButton {...product} />
+              <div className="w-1/2">
+                <CartActionBtn {...product} />
+              </div>
               <Button className="!w-1/2">Order Now</Button>
             </div>
           </div>
