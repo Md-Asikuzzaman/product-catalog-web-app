@@ -16,6 +16,24 @@ export const metadata: Metadata = {
   description: "Product Catalog Web App | Build with Next.js & React.js",
   keywords: "product, catalog, app, next.js, react.js",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_URL}`),
+  openGraph: {
+    type: "website",
+    url: `${process.env.NEXT_PUBLIC_APP_URL}`,
+    locale: "en_US",
+    siteName: "Shop",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Shop",
+      },
+    ],
+  },
+  // Open-Graph for twitter
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
